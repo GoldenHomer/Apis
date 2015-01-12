@@ -29,7 +29,7 @@
 
     		<div id="success" class="alert alert-success">Success</div>
     		<div id="fail" class="alert alert-danger">Could not find weather data for that city. Try again.</div>
-    		<div id="noCity" class="alert alert-danger">Enter a city!</div>
+    		<div id="noCity" class="alert alert-danger">Enter an address!</div>
   	  </div>
   	</div>
   </div>
