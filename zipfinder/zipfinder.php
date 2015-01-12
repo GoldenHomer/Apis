@@ -16,9 +16,9 @@
   <div class="container">
   	<div class="row">
   	  <div class="col-md-6 col-md-offset-3 center">
-    		<h1 class="center black">Weather Predictor</h1>
+    		<h1 class="center black">Zipcode Finder</h1>
 
-    		<p class="lead center black">Enter a city below to get a weather forecast.</p>
+    		<p class="lead center black">Enter a address to find a zipcode.</p>
 
     		<form>
     		  <div class="form-group">
