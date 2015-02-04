@@ -40,22 +40,24 @@
     $("#findMyZip").click(function(event) {
       
       var result = 0;
+
       $(".alert").hide();
-	// Recall that preventDefault() in this case stops the button from submitting the form.
+	     // Recall that preventDefault() in this case stops the button from submitting the form.
       event.preventDefault();
 
       $.ajax({
-        type: "GET".
-        url: "https://maps.googleapis.com/maps/api/geocode/xml?address="+encodeURIComponent($('#address').val())+"&sensor=false&key=AIzaSyBuY7mIUm2VjHoYvckJi97g7iZ3Cdfu4QM",
+        type: "GET",
+        url: "https://maps.googleapis.com/maps/api/geocode/xml?address="+encodeURIComponent($('#address').val())+"&sensor=false&key=AIzaSyCVnoiJUTj8UORBUWAWhHrh08HFBY4Mq_o",
+        // encodeURLComponent for change to URL-friendly format when address is entered.
         dataType: "xml",
-        success: processXML
+        success: processXML,
         error: error
       });
 
       function processXML(xml){
         $(xml).find("address_component").each(function(){
           if($(this).find("type").text() == "postal_code"){
-            $("#success").html("The zipcode is"+$(this).find("long_name").text()).fadeIn();
+            $("#success").html("The zipcode is "+$(this).find("long_name").text()).fadeIn();
 
             result = 1;
           }
